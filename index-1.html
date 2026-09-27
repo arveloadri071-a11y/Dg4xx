@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dg4xx.com — Trading Dashboard</title>
+<meta name="description" content="dg4xx.com — plataforma de trading y análisis de mercado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090d;--panel:#0d1118;--panel2:#111722;--line:#1e2632;--text:#f3f6fa;--muted:#8994a5;--green:#2ee59d;--red:#ff5c70;--blue:#6ea8ff;--gold:#f6c85f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#14233a 0,#07090d 38%);color:var(--text);font-family:Inter,Arial,sans-serif}
+button{font:inherit}.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}.side{border-right:1px solid var(--line);padding:25px 16px;background:rgba(7,9,13,.82);backdrop-filter:blur(12px);position:sticky;top:0;height:100vh}.logo{font-weight:800;font-size:24px;letter-spacing:-1px;margin:3px 10px 35px}.logo span{color:var(--green)}.nav a{display:flex;gap:12px;padding:12px 13px;margin:5px 0;color:var(--muted);text-decoration:none;border-radius:10px;font-size:14px}.nav a.active,.nav a:hover{background:#131a24;color:#fff}.bottom{position:absolute;bottom:22px;left:16px;right:16px}.mini{border:1px solid var(--line);padding:14px;border-radius:13px;background:#0b0f15}.mini small{color:var(--muted)}.main{padding:26px 32px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}.title{font-size:28px;font-weight:800;margin-top:6px}.actions{display:flex;gap:10px}.btn{border:1px solid var(--line);background:#101620;color:#fff;padding:10px 15px;border-radius:9px;cursor:pointer}.btn.primary{background:var(--green);color:#04120d;border-color:var(--green);font-weight:700}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:linear-gradient(145deg,#101620,#0b0f15);border:1px solid var(--line);border-radius:15px;padding:18px}.label{font-size:12px;color:var(--muted)}.value{font-size:24px;font-weight:700;margin:9px 0}.up{color:var(--green)}.down{color:var(--red)}.content{display:grid;grid-template-columns:1.7fr 1fr;gap:15px;margin-top:15px}.chart,.watch,.orders{background:#0d1118;border:1px solid var(--line);border-radius:15px;padding:18px}.chart-head{display:flex;justify-content:space-between;align-items:center}.tabs button{background:none;border:0;color:var(--muted);padding:7px;cursor:pointer}.tabs button.active{color:#fff}.chartbox{height:350px;margin-top:15px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(110,168,255,.035),transparent)}svg{width:100%;height:100%}.sidecol{display:flex;flex-direction:column;gap:15px}.asset{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #19202b}.asset:last-child{border:0}.asset b{display:block}.asset small{color:var(--muted)}.price{text-align:right}.table{width:100%;border-collapse:collapse;margin-top:8px}.table th,.table td{text-align:left;padding:13px 8px;border-bottom:1px solid #1b222c;font-size:13px}.table th{color:var(--muted);font-weight:500}.risk{margin-top:15px;display:flex;align-items:center;justify-content:space-between}.bar{height:7px;background:#1b232d;border-radius:10px;width:150px;overflow:hidden}.bar i{display:block;width:34%;height:100%;background:var(--green)}.note{color:var(--muted);font-size:11px;line-height:1.5;margin-top:18px}@media(max-width:950px){.app{grid-template-columns:1fr}.side{display:none}.main{padding:20px}.cards{grid-template-columns:repeat(2,1fr)}.content{grid-template-columns:1fr}}@media(max-width:560px){.cards{grid-template-columns:1fr}.top{align-items:flex-start}.actions{display:none}.title{font-size:23px}.chartbox{height:270px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="logo">dg4<span>xx</span><small>.com</small></div>
+  <nav class="nav">
+    <a class="active" href="#">◈ Dashboard</a>
+    <a href="#">▦ Markets</a>
+    <a href="#">↗ Watchlist</a>
+    <a href="#">◫ Positions</a>
+    <a href="#">◎ Risk Manager</a>
+    <a href="#">⚙ Settings</a>
+  </nav>
+  <div class="bottom"><div class="mini"><small>Account mode</small><br><strong style="color:var(--green)">● Demo Trading</strong></div></div>
+</aside>
+
+<main class="main">
+  <header class="top">
+    <div><div class="eyebrow">dg4xx.com / overview</div><div class="title">Trading Dashboard</div></div>
+    <div class="actions"><button class="btn">Export</button><button class="btn primary" onclick="alert('Demo order panel — connect your broker/API to enable live trading.')">New Order</button></div>
+  </header>
+
+  <section class="cards">
+    <div class="card"><div class="label">Portfolio Value</div><div class="value">$48,620.40</div><div class="up">+2.84% today</div></div>
+    <div class="card"><div class="label">Today's P/L</div><div class="value up">+$1,346.20</div><div class="label">Realized + unrealized</div></div>
+    <div class="card"><div class="label">Available Cash</div><div class="value">$16,280.00</div><div class="label">Demo account</div></div>
+    <div class="card"><div class="label">Risk Used</div><div class="value">3.4%</div><div class="up">Within target</div></div>
+  </section>
+
+  <section class="content">
+    <div>
+      <div class="chart">
+        <div class="chart-head"><div><b>BTC / USD</b> <span class="up"> +2.31%</span><div class="label">$67,842.15</div></div><div class="tabs"><button>1H</button><button class="active">1D</button><button>1W</button><button>1M</button></div></div>
+        <div class="chartbox">
+          <svg viewBox="0 0 900 340" preserveAspectRatio="none">
+            <g stroke="#1c2530" stroke-width="1"><path d="M0 70H900M0 140H900M0 210H900M0 280H900"/></g>
+            <polyline fill="none" stroke="#2ee59d" stroke-width="3" points="0,270 45,252 90,260 135,220 180,235 225,190 270,205 315,160 360,180 405,145 450,152 495,115 540,130 585,92 630,110 675,82 720,105 765,65 810,78 855,42 900,55"/>
+            <polyline fill="rgba(46,229,157,.08)" stroke="none" points="0,340 0,270 45,252 90,260 135,220 180,235 225,190 270,205 315,160 360,180 405,145 450,152 495,115 540,130 585,92 630,110 675,82 720,105 765,65 810,78 855,42 900,55 900,340"/>
+          </svg>
+        </div>
+      </div>
+      <div class="orders">
+        <div class="chart-head"><b>Open Positions</b><span class="label">3 positions</span></div>
+        <table class="table"><thead><tr><th>Asset</th><th>Side</th><th>Entry</th><th>Mark</th><th>P/L</th></tr></thead>
+        <tbody><tr><td>BTC/USD</td><td class="up">LONG</td><td>$65,220</td><td>$67,842</td><td class="up">+$524</td></tr><tr><td>ETH/USD</td><td class="up">LONG</td><td>$3,240</td><td>$3,386</td><td class="up">+$292</td></tr><tr><td>NVDA</td><td class="down">SHORT</td><td>$142.10</td><td>$140.90</td><td class="up">+$180</td></tr></tbody></table>
+      </div>
+    </div>
+
+    <div class="sidecol">
+      <div class="watch"><div class="chart-head"><b>Watchlist</b><span class="label">Live demo</span></div>
+        <div class="asset"><div><b>BTC/USD</b><small>Crypto</small></div><div class="price"><b>$67,842</b><small class="up">+2.31%</small></div></div>
+        <div class="asset"><div><b>ETH/USD</b><small>Crypto</small></div><div class="price"><b>$3,386</b><small class="up">+1.84%</small></div></div>
+        <div class="asset"><div><b>SPY</b><small>ETF</small></div><div class="price"><b>$571.28</b><small class="up">+0.62%</small></div></div>
+        <div class="asset"><div><b>NVDA</b><small>Stock</small></div><div class="price"><b>$140.90</b><small class="down">-0.47%</small></div></div>
+      </div>
+      <div class="watch">
+        <div class="chart-head"><b>Risk Manager</b><span class="up">Healthy</span></div>
+        <div class="risk"><span class="label">Daily risk</span><span>3.4%</span></div><div class="bar"><i></i></div>
+        <div class="risk"><span class="label">Max drawdown</span><span>6.2%</span></div><div class="bar"><i style="width:52%"></i></div>
+        <p class="note">Los precios y métricas mostrados son datos de demostración. No representan cotizaciones en tiempo real ni constituyen asesoramiento financiero.</p>
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+</body>
+</html>
